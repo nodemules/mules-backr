@@ -19,8 +19,8 @@
     keepLocalBackups: false,
     timezoneOffset: config.timezoneOffset
   };
-
   new CronJob(config.backupTime, function() {
+    console.log('Starting Backup at' + new Date());
     backup(backupConfig).then(() => {
       console.log('Successful Backup for ' + new Date());
     }, (err) => {
