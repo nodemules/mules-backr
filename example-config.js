@@ -13,5 +13,5 @@ module.exports = {
     name: ''
   },
   timezoneOffset: -4,
-  backupTime: '0 0 1 * * *'
+  backupTime: '' //* * * * * * format
 };

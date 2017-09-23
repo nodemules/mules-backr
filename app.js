@@ -21,7 +21,7 @@
   };
   new CronJob(config.backupTime, function() {
     console.log('Starting Backup at' + new Date());
-    backup(backupConfig).then(() => {
+    backup(Object.assign({}, backupConfig)).then(() => {
       console.log('Successful Backup for ' + new Date());
     }, (err) => {
       console.log('There was an error backing up data on ' + new Date());
